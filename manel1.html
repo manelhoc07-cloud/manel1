@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Rostom 💙</title>
+
+<style>
+body{
+    background-color:#0b3d91;
+    font-family:Arial;
+    text-align:center;
+    color:white;
+}
+
+h1{
+    margin-top:40px;
+}
+
+.container{
+    margin-top:50px;
+}
+
+.heart{
+    font-size:50px;
+    cursor:pointer;
+    margin:20px;
+    transition:0.3s;
+}
+
+.heart:hover{
+    transform:scale(1.3);
+}
+
+#message{
+    margin-top:40px;
+    font-size:24px;
+    color:#aee1ff;
+}
+
+#secretBtn{
+    margin-top:40px;
+    padding:10px 20px;
+    font-size:16px;
+    background-color:#1e90ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#secretBtn:hover{
+    background-color:#63b3ff;
+}
+
+#secretMessage{
+    margin-top:20px;
+    font-size:22px;
+    color:#aee1ff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Click the hearts, Rostomy 💙</h1>
+<p>je fais ça exactement pr toi ehehehe</p>
+
+<div class="container">
+    <!-- Chaque cœur a un index unique pour son message -->
+    <span class="heart" onclick="showMessage(0)">❤️</span>
+    <span class="heart" onclick="showMessage(1)">❤️</span>
+    <span class="heart" onclick="showMessage(2)">❤️</span>
+    <span class="heart" onclick="showMessage(3)">❤️</span>
+    <span class="heart" onclick="showMessage(4)">❤️</span>
+
+    <br>
+    <button id="secretBtn" onclick="showSecret()">Secret button 💙</button>
+    <div id="secretMessage"></div>
+</div>
+
+<div id="message"></div>
+
+<script>
+// Messages pour chaque cœur
+let messages = [
+"merci d'etre la pour moi, j suis trés chanceuse de t'avoir dans ma vie lvv",
+"continue d'etre toi ne changes jamais mv💙",
+"Tu sais quoi? T’es officiellement mon humain préféré pour parler de tout et de rien, t'as pas le choix déja",
+"enfttt t pas fatigué d'etre tjrr parfait ca doit etre lourd de porter cete grosse qualité hein",
+"T’es la raison pour laquelle je check tt le temps mon tel donc t'as tout gagné enft✨"
+];
+
+// Affiche le message correspondant au cœur cliqué
+function showMessage(index){
+    document.getElementById("message").innerText = messages[index];
+    // Vider le message secret si visible
+    document.getElementById("secretMessage").innerText = "";
+}
+
+// Fonction pour le bouton secret
+function showSecret(){
+    // Vider le message des cœurs
+    document.getElementById("message").innerText = "";
+
+    // Afficher le message secret
+    document.getElementById("secretMessage").innerHTML =
+    "You found the secret 💙 <br><br>" +
+    "j'espère t vas jamais quitter mvie, you mean a lot to me. Je me suis grave attachée à toi.<br><br>" +
+    "j t'apprécie vrm beaucoup Rostom.";
+}
+</script>
+
+</body>
+</html>
